@@ -1,0 +1,87 @@
+$content:"content";
+$left:"left";
+$flex:"flex";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: $flex;
+}
+
+.just-cont {
+    justify-content: $content;
+}
+
+.just-c-space-bet {
+    justify-content: space-between;
+}
+
+.flex-wrap {
+    flex-wrap: wrap
+}
+
+.w1100 {
+    width: 1100px;
+}
+
+.w960 {
+    width: 960px;
+}
+
+.w450 {
+    width: 450px;
+}
+
+.w700 {
+    width: 700px;
+}
+
+.w120 {
+    width: 120px;
+}
+
+.w300 {
+    width: 300px;
+}
+
+.h210 {
+    height: 210px;
+}
+
+.h300 {
+    height: 300px
+}
+
+.h500 {
+    height: 500px
+}
+
+.h50 {
+    height: 50px
+}
+
+.auto {
+    margin: 0 auto;
+}
+
+.ma16 {
+    margin: 16px
+}
+
+.icon {
+    float: $left;
+    width: 176px;
+    height: 69px;
+    background-position: 0 0;
+}
+
+.text {
+    background-color: aqua;
+}
+
+.font-content-40 {
+    text-align: $content;
+    line-height: 40px;
+}
