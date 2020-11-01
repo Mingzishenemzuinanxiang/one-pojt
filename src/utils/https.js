@@ -2,7 +2,7 @@ import axios from 'axios';
 import router from '../router';
 
 axios.defaults.timeout = 5000; //请求超时5秒
-axios.defaults.baseURL = 'http://49.233.66.125:3000/'; //请求base url
+axios.defaults.baseURL = '/api'; //请求base url
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; //设置post请求是的header信息
 // axios.defaults.withCredentials = true //如果你要用到session验证码功能，让请求携带cookie
 

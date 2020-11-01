@@ -1,14 +1,12 @@
 <template>
   <div>
     <div>
-      <banner></banner>
       <mains></mains>
     </div>
   </div>
 </template>
 
 <script>
-import banner from "@/components/banner/Banner";
 import mains from "../components/main/Main";
 
 export default {
@@ -19,7 +17,6 @@ export default {
   },
   components: {
     //注册组件
-    banner,
     mains,
   },
   methods: {
