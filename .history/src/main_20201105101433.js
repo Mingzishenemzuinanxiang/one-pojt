@@ -9,7 +9,6 @@ import { Api } from './utils/request'
 //定义全局变量
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
-Vue.prototype.$api = Api;
 
 
 //请求

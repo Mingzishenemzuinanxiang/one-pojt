@@ -94,7 +94,7 @@ export default {
       if (!item.go) return;
 
       if (localStorage.getItem('edit')) {
-        localStorage.removeItem('edit')
+        localStorage.removeItem('deit')
       }
       this.$router.push({ name: item.go });
       

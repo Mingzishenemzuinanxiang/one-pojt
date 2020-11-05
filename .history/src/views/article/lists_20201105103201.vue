@@ -90,7 +90,6 @@ export default {
     },
     getData() {
       // this.$get("article/allArticle").then((res) => {
-      //   console.log(res);
       //   if (res.code === 200) {
       //     this.tabelData = res.data;
       //     this.tabelData.map((item) => {
@@ -100,11 +99,11 @@ export default {
       //   }
       // });
       this.$api.getAllarticleList().then((res)=>{
-        this.tabelData = res.data;
-          this.tabelData.map((item) => {
-            item.star = parseInt(item.star);
-            item.date = toTime(item.date);
-          });
+        // this.tabelData = res.data;
+        //   this.tabelData.map((item) => {
+        //     item.star = parseInt(item.star);
+        //     item.date = toTime(item.date);
+        //   });
       })
     },
     //内部方法

@@ -100,11 +100,12 @@ export default {
       //   }
       // });
       this.$api.getAllarticleList().then((res)=>{
-        this.tabelData = res.data;
-          this.tabelData.map((item) => {
-            item.star = parseInt(item.star);
-            item.date = toTime(item.date);
-          });
+        // this.tabelData = res.data;
+        //   this.tabelData.map((item) => {
+        //     item.star = parseInt(item.star);
+        //     item.date = toTime(item.date);
+        //   });
+        console.log(res);
       })
     },
     //内部方法

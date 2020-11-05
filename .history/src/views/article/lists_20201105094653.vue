@@ -2,7 +2,7 @@
   <div>
     <el-card shadow="always" :body-style="{ padding: '20px' }">
       <template>
-        <el-table :data="tabelData" style="width: 100%,height:100%" >
+        <el-table :data="tabelData" style="width: 100%;heigth:100%" >
           <el-table-column fixed prop="title" label="标题" width="150">
           </el-table-column>
           <el-table-column prop="source" label="来源" width="120">
@@ -89,23 +89,15 @@ export default {
         });
     },
     getData() {
-      // this.$get("article/allArticle").then((res) => {
-      //   console.log(res);
-      //   if (res.code === 200) {
-      //     this.tabelData = res.data;
-      //     this.tabelData.map((item) => {
-      //       item.star = parseInt(item.star);
-      //       item.date = toTime(item.date);
-      //     });
-      //   }
-      // });
-      this.$api.getAllarticleList().then((res)=>{
-        this.tabelData = res.data;
+      this.$get("article/allArticle").then((res) => {
+        if (res.code === 200) {
+          this.tabelData = res.data;
           this.tabelData.map((item) => {
             item.star = parseInt(item.star);
             item.date = toTime(item.date);
           });
-      })
+        }
+      });
     },
     //内部方法
   },

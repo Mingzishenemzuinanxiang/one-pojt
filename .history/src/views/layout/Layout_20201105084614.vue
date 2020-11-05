@@ -92,13 +92,11 @@ export default {
     go(item) {
       this.additem(item);
       if (!item.go) return;
-
-      if (localStorage.getItem('edit')) {
-        localStorage.removeItem('edit')
-      }
       this.$router.push({ name: item.go });
       
-      
+      if (localStorage.getItem('edit')) {
+        localStorage.removeItem('deit')
+      }
     },
 
     additem(item) {

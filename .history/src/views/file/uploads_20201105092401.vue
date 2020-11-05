@@ -20,7 +20,7 @@
         </el-upload>
       </el-col>
       <el-col :span="12" :offset="0">
-        <el-button class="btn" @click="toggleShow">设置头像</el-button>
+        <button class="btn" @click="toggleShow">设置头像</button>
         <my-upload
           @crop-success="cropSuccess"
           @crop-upload-success="cropUploadSuccess"
@@ -32,7 +32,7 @@
           :size="size"
           langType="zh"
           :noRotate="false"
-          field="file"
+          field="Avatar1"
           url="http://localhost:8080/api/upload"
         ></my-upload>
         <img :src="imgDataUrl" />

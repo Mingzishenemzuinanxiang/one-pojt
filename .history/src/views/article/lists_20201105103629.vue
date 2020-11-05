@@ -105,6 +105,7 @@ export default {
             item.star = parseInt(item.star);
             item.date = toTime(item.date);
           });
+        console.log(res);
       })
     },
     //内部方法

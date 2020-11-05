@@ -32,7 +32,7 @@
           :size="size"
           langType="zh"
           :noRotate="false"
-          field="file"
+          field="Avatar1"
           url="http://localhost:8080/api/upload"
         ></my-upload>
         <img :src="imgDataUrl" />

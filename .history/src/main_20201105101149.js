@@ -9,11 +9,10 @@ import { Api } from './utils/request'
 //定义全局变量
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
-Vue.prototype.$api = Api;
 
-
-//请求
-//element-ui
+Vue.use(Api)
+    //请求
+    //element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);

@@ -4,7 +4,7 @@
       <el-col :span="12" :offset="0">
         <el-upload
           class="upload-demo"
-          :action="uploadsurl"
+          action="/api/upload"
           :on-preview="handlePreview"
           :on-remove="handleRemove"
           :before-remove="beforeRemove"
@@ -20,7 +20,7 @@
         </el-upload>
       </el-col>
       <el-col :span="12" :offset="0">
-        <el-button class="btn" @click="toggleShow">设置头像</el-button>
+        <button class="btn" @click="toggleShow">设置头像</button>
         <my-upload
           @crop-success="cropSuccess"
           @crop-upload-success="cropUploadSuccess"
@@ -32,8 +32,8 @@
           :size="size"
           langType="zh"
           :noRotate="false"
-          field="file"
-          url="http://localhost:8080/api/upload"
+          field="Avatar1"
+          url="https://httpbin.org/post"
         ></my-upload>
         <img :src="imgDataUrl" />
       </el-col>
@@ -42,23 +42,15 @@
 </template>
 
 <script>
-import myUpload from "vue-image-crop-upload";
-
 export default {
   name: "",
   props: {},
   data() {
     return {
       fileList: [],
-
-      imgDataUrl: "",
-      show: false,
-      size: 2.1,
-      uploadsurl:"",
     };
   },
   components: {
-    myUpload,
     //注册组件
   },
   methods: {
@@ -77,28 +69,6 @@ export default {
     },
     beforeRemove(file, fileList) {
       return this.$confirm(`确定移除 ${file.name}？`);
-    },
-
-    toggleShow() {
-      this.show = !this.show;
-    },
-    cropSuccess(imgDataUrl, field) {
-      console.log("-------- crop success --------", imgDataUrl, field);
-      this.$post()
-
-    },
-    //上传成功回调
-    cropUploadSuccess(jsonData, field) {
-      console.log("-------- upload success --------");
-      this.imgDataUrl = jsonData.files.Avatar1;
-      console.log(jsonData);
-      console.log("field: " + field);
-    },
-    //上传失败回调
-    cropUploadFail(status, field) {
-      console.log("-------- upload fail --------");
-      console.log("上传失败状态" + status);
-      console.log("field: " + field);
     },
     //内部方法
   },

@@ -5,15 +5,14 @@ import store from './store'
 
 //请求
 import { post, get } from './utils/https'
-import { Api } from './utils/request'
+import { Request } from './utils/request'
 //定义全局变量
 Vue.prototype.$post = post;
 Vue.prototype.$get = get;
-Vue.prototype.$api = Api;
 
-
-//请求
-//element-ui
+Vue.use(Request)
+    //请求
+    //element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);

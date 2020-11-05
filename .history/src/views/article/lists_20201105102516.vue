@@ -90,7 +90,6 @@ export default {
     },
     getData() {
       // this.$get("article/allArticle").then((res) => {
-      //   console.log(res);
       //   if (res.code === 200) {
       //     this.tabelData = res.data;
       //     this.tabelData.map((item) => {
